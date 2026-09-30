@@ -14,7 +14,7 @@ pipeline{
       stage ("check") {
         steps{
          sh 'systemctl is-active apache2'
-          sh "http://localhost:8080"
+          sh "curl -I http://localhost"
         }
       }
     }

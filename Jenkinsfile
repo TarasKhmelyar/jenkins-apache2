@@ -1,5 +1,5 @@
 pipeline {
-      agent { label 'vm'}
+      agent any
   
     stages {
       stage ('install') {

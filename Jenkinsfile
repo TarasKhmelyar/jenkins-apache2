@@ -19,5 +19,12 @@ pipeline {
           sh "curl -I http://localhost"
         }
       }
+      stage ('finish') {
+        steps {
+         echo 'Congrat!'
+          sh 'curl -I http://localhost'
+          sh 'sudo apt remove apache2'
+        }
+      }
     }
 }

@@ -23,7 +23,7 @@ pipeline {
         steps {
          echo 'Congrat!'
           sh 'curl -I http://localhost'
-          sh 'sudo apt remove apache2'
+          sh 'sudo apt remove apache2 -y'
         }
       }
     }

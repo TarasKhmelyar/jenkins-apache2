@@ -16,7 +16,8 @@ pipeline {
       stage ('check') {
         steps {
          sh 'systemctl is-active apache2'
-          sh "curl -I http://localhost"
+         sh 'curl -i http://localhost/nonexistent-page'
+         sh "curl -i http://localhost"
         }
       }
       stage ('finish') {

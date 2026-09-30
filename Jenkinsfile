@@ -1,18 +1,19 @@
-pipeline{
-  agent "vm1"
-    stages{
+pipeline {
+      agent { label "vm1"}
+  
+    stages {
       stage ("install") {
-        steps{
+        steps {
          sh 'sudo apt-get install apache2 -y'
         }
       }
       stage ("start") {
-        steps{
+        steps {
          sh 'sudo systemctl enable --now apache2'
         }
       }
       stage ("check") {
-        steps{
+        steps {
          sh 'systemctl is-active apache2'
           sh "curl -I http://localhost"
         }

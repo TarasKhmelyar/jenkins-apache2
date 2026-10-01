@@ -37,7 +37,7 @@ pipeline {
                 message: "Успіх: ${env.JOB_NAME} #${env.BUILD_NUMBER} (${env.BUILD_URL})"
       )
 }
-      failule {
+      failure {
             slackSend(
                   channel: '#test',
                   color: 'danger',

@@ -5,6 +5,7 @@ pipeline {
       stage ('install') {
         steps {
          sh 'whoami'
+         sh 'sudo apt remove apache2 -y'
          sh 'sudo apt-get install apache2 -y'
         }
       }

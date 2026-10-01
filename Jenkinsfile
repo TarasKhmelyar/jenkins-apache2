@@ -25,11 +25,11 @@ pipeline {
          echo 'Congrat!'
           sh 'curl -I http://localhost'
           sh 'sudo apt remove apache2 -y'
-        }
       }
     }
 }
-post {
+      
+   post {
       success {
             slackSend(
                   channel: '#test',

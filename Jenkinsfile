@@ -34,14 +34,14 @@ pipeline {
             slackSend(
                   channel: '#test',
                   color: 'good',
-                  message: 'Успіх: ${env.JOB_NAME} #${env.BUILD_NUMBER} (${env.BUILD_URL})'
+                  message: "Успіх: ${env.JOB_NAME} #${env.BUILD_NUMBER} (${env.BUILD_URL})"
             )
       }
       failule {
             slackSend(
                   channel: '#test',
                   color: 'danger',
-                  message: 'ПОМИЛКА: ${env.JOB_NAME} #${env.BUILD_NUMBER} (${env.BUILD_URL})'
+                  message: "ПОМИЛКА: ${env.JOB_NAME} #${env.BUILD_NUMBER} (${env.BUILD_URL})"
             )
       }
 }

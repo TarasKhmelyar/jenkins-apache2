@@ -27,8 +27,8 @@ pipeline {
           sh 'sudo apt remove apache2 -y'
       }
     }
+  }
 }
-      
    post {
       success {
             slackSend(

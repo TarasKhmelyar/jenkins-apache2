@@ -30,12 +30,12 @@ pipeline {
     }
   }
 }
-   post {
+    post {
       success {
-            slackSend(
-                  channel: '#test',
-                  color: 'good',
-                  message: "Успіх: ${env.JOB_NAME} #${env.BUILD_NUMBER} (${env.BUILD_URL})"
+          slackSend(
+                channel: '#test',
+                color: 'good',
+                message: "Успіх: ${env.JOB_NAME} #${env.BUILD_NUMBER} (${env.BUILD_URL})"
             )
       }
       failule {
